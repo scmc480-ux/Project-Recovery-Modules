@@ -86,14 +86,17 @@ For each run, the module writes:
 - `master_identity_first_contact_timeline.csv`
 - `run_summary.json`
 
-Run a multi-pack batch and write master crosscheck outputs:
+Use the same CLI for a multi-pack batch and master crosscheck outputs:
 
 ```powershell
-python -m facebook_identity_variants.batch_cli `
+python -m facebook_identity_variants.cli `
   --source path\to\facebook_export_pack_1 `
   --source path\to\facebook_export_pack_2 `
   --output outputs\identity_variants_batch
 ```
+
+Pass `--batch` to write the master crosscheck shape for a single source pack.
+The `facebook-identity-variants-batch` command remains as a convenience alias.
 
 Batch outputs are generic and must not be committed when they contain real case
 data. The writer recreates the master crosscheck artifact shape:

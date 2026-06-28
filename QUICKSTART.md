@@ -83,10 +83,10 @@ Expected outputs:
 - `master_identity_first_contact_timeline.csv`
 - `run_summary.json`
 
-Run a multi-pack batch with master crosscheck files:
+Use the same identity variants CLI for a multi-pack batch with master crosscheck files:
 
 ```powershell
-python -m facebook_identity_variants.batch_cli `
+python -m facebook_identity_variants.cli `
   --source path\to\facebook_export_pack_1 `
   --source path\to\facebook_export_pack_2 `
   --output outputs\sample_identity_variants_batch
