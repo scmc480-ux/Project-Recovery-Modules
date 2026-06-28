@@ -1,0 +1,11 @@
+{
+  "device_locations": [
+    {
+      "timestamp": 1712134800,
+      "ip_address": "203.0.113.42",
+      "device": "SAMPLE_DEVICE_002",
+      "latitude": 51.0001,
+      "longitude": -114.0001
+    }
+  ]
+}

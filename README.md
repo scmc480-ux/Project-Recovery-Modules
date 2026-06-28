@@ -20,7 +20,7 @@ specialized modules when their case needs them.
 | Module | Status | Purpose |
 | --- | --- | --- |
 | `facebook_interactions` | v0.1.0 | Extract names, handles or identifiers, timestamps, interaction rows, and entity interaction counts. |
-| `facebook_ip_correlation` | Planned | Correlate identified IP/network/location signals with timestamps and interaction context without treating IP location as proof. |
+| `facebook_ip_correlation` | v0.1.0 | Extract and correlate identified IP/network/location signals with timestamps and context without treating IP location as proof. |
 
 ## Repository Layout
 

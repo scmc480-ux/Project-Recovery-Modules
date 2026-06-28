@@ -1,13 +1,13 @@
 # Facebook IP Correlation Specification
 
-Status: planned
+Status: initial implementation
 
 ## Scope
 
-The module will ingest Facebook export surfaces that contain account activity,
+The module ingests Facebook export surfaces that contain account activity,
 login, session, device, IP, or location-adjacent records.
 
-It will not be part of the Facebook Reader v1 model and will remain optional.
+It is not part of the Facebook Reader v1 model and remains optional.
 
 The module must distinguish IP-derived approximate location from precise
 device-location records, such as GPS/location-history style data when those
@@ -41,6 +41,10 @@ records are explicitly present in an export.
 - `precise_location_nearby`
 - `close_timestamp`
 - `device_or_session_overlap`
+
+Initial implementation includes `same_ip` and `same_subnet`. The remaining
+labels are reserved for future enrichments that add ASN lookup, geolocation
+lookup, explicit time-window analysis, and deeper device/session comparison.
 
 ## Interpretation Rule
 

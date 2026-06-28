@@ -12,7 +12,7 @@ FORBIDDEN_PATH_PARTS = {
     "outputs",
 }
 
-PUBLIC_TEXT_SUFFIXES = {".md", ".json", ".txt", ".csv"}
+PUBLIC_TEXT_SUFFIXES = {".md", ".json", ".txt", ".csv", ".html", ".htm"}
 TEXT_SUFFIXES = PUBLIC_TEXT_SUFFIXES | {".py", ".toml"}
 
 ALLOWED_URLS = {

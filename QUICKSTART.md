@@ -24,3 +24,18 @@ Expected outputs:
 
 Use an extracted Facebook export folder or a `.zip` export as `--source`.
 
+Run the Facebook IP correlation sample:
+
+```powershell
+python -m facebook_ip_correlation.cli `
+  --source modules/facebook_ip_correlation/examples/facebook_sample `
+  --output outputs/sample_ip_correlation
+```
+
+Expected outputs:
+
+- `ip_observations.jsonl`
+- `ip_observations.csv`
+- `ip_correlation_summary.json`
+- `ip_correlation_summary.csv`
+- `run_summary.json`

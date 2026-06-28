@@ -4,25 +4,47 @@
 
 ---
 
-Planned optional module for Project Recovery.
+Optional IP and location correlation module for Project Recovery.
 
 This module is intentionally separate from `facebook_interactions` because IP
 and location correlation is a different evidentiary layer.
 
 ## Intended Purpose
 
-The module will compare identified IP/network/location signals against
+The module compares identified IP/network/location signals against
 timestamped interaction context.
 
-Potential outputs include:
+Current outputs include:
 
 - exact IP matches
 - subnet or network proximity
 - approximate geolocation matches
 - GPS or precise device-location records when explicitly present in the export
-- time-window overlap
-- device or session overlap when present
+- device or session context when present
 - confidence labels and plain-English explanations
+
+## Quick Run
+
+```powershell
+python -m facebook_ip_correlation.cli `
+  --source modules/facebook_ip_correlation/examples/facebook_sample `
+  --output outputs/sample_ip_correlation
+```
+
+## Outputs
+
+For each run, the module writes:
+
+- `ip_observations.jsonl`
+- `ip_observations.csv`
+- `ip_correlation_summary.json`
+- `ip_correlation_summary.csv`
+- `run_summary.json`
+
+Each observation includes timestamp, raw timestamp, IP address, IP version,
+location signal type, source path, source hash, raw payload path, device label,
+session label, browser label, approximate location, precise location,
+confidence, and explanation.
 
 ## Evidence Boundary
 
