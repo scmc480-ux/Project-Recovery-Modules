@@ -15,6 +15,7 @@
 - Added contact, device/session/app, engagement, location/place, social-graph, commerce/payment, and relabeled numeric-ID variant summaries.
 - Added per-variant timeline outputs that list dated interactions by identified variant ID.
 - Added identity observation and variant summary outputs in JSONL, JSON, and CSV.
+- Added generic multi-pack batch writer for master identity variant crosscheck outputs.
 - Added synthetic identity variant sample data and tests.
 
 ## 0.2.0

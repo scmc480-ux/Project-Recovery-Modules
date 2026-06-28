@@ -86,6 +86,33 @@ For each run, the module writes:
 - `master_identity_first_contact_timeline.csv`
 - `run_summary.json`
 
+Run a multi-pack batch and write master crosscheck outputs:
+
+```powershell
+python -m facebook_identity_variants.batch_cli `
+  --source path\to\facebook_export_pack_1 `
+  --source path\to\facebook_export_pack_2 `
+  --output outputs\identity_variants_batch
+```
+
+Batch outputs are generic and must not be committed when they contain real case
+data. The writer recreates the master crosscheck artifact shape:
+
+- `MASTER_identity_observations.csv`
+- `MASTER_identity_observations.jsonl`
+- `MASTER_identity_variant_summary.csv`
+- `MASTER_identity_variant_summary.jsonl`
+- `MASTER_identity_variant_timeline_by_date.csv`
+- `MASTER_identity_variant_timeline_by_date.jsonl`
+- `MASTER_run_summary.csv`
+- `MASTER_run_summary.json`
+- `MASTER_counts.json`
+- `OWNER_IDENTITY_VARIANT_CROSSCHECK_ROSTER.csv`
+- `OWNER_IDENTITY_FIRST_CONTACT_TIMELINE.csv`
+- `OWNER_IDENTITY_FIRST_CONTACT_TIMELINE.txt`
+- `OWNER_IDENTITY_UNASSIGNED_ID_VARIANTS.csv`
+- `OWNER_IDENTITY_VARIANT_CROSSCHECK_REPORT.txt`
+
 Each observation includes timestamp, observation type, entity key, Facebook ID,
 name, normalized name, handle or identifier, profile URL, vanity slug, thread
 identifier, participant context, IP address, related platform ID type/value,

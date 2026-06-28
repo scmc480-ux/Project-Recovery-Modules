@@ -20,6 +20,7 @@ from facebook_identity_variants.extractor import (  # noqa: E402
     process_export,
     summarize_variants,
 )
+from facebook_identity_variants.batch import process_batch  # noqa: E402
 
 SAMPLE = ROOT / "modules/facebook_identity_variants/examples/facebook_sample"
 
@@ -212,6 +213,60 @@ class IdentityVariantTests(unittest.TestCase):
                         archive.write(path, path.relative_to(SAMPLE).as_posix())
             records = extract_observations(zip_path)
             self.assertGreaterEqual(len(records), 5)
+
+    def test_batch_writer_recreates_master_crosscheck_shape(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            output = Path(tmp) / "batch"
+            summary = process_batch([SAMPLE], output)
+
+            self.assertEqual(summary["completed_source_count"], 1)
+            self.assertEqual(summary["skipped_source_count"], 0)
+            self.assertTrue((output / "batch_manifest.json").exists())
+            self.assertTrue((output / "MASTER_counts.json").exists())
+            self.assertTrue((output / "MASTER_run_summary.csv").exists())
+            self.assertTrue((output / "MASTER_identity_observations.jsonl").exists())
+            self.assertTrue((output / "MASTER_identity_variant_summary.jsonl").exists())
+            self.assertTrue((output / "MASTER_identity_variant_timeline_by_date.jsonl").exists())
+            self.assertTrue((output / "OWNER_IDENTITY_VARIANT_CROSSCHECK_ROSTER.csv").exists())
+            self.assertTrue((output / "OWNER_IDENTITY_FIRST_CONTACT_TIMELINE.csv").exists())
+            self.assertTrue((output / "OWNER_IDENTITY_FIRST_CONTACT_TIMELINE.txt").exists())
+            self.assertTrue((output / "OWNER_IDENTITY_UNASSIGNED_ID_VARIANTS.csv").exists())
+            self.assertTrue((output / "OWNER_IDENTITY_VARIANT_CROSSCHECK_REPORT.txt").exists())
+
+            with (output / "MASTER_identity_observations.csv").open("r", encoding="utf-8", newline="") as handle:
+                self.assertEqual(next(csv.reader(handle))[:2], ["source_pack", "source_root"])
+            with (output / "MASTER_identity_variant_timeline_by_date.csv").open("r", encoding="utf-8", newline="") as handle:
+                self.assertEqual(next(csv.reader(handle))[:4], ["source_pack", "source_root", "variant_id", "variant_id_type"])
+            with (output / "OWNER_IDENTITY_VARIANT_CROSSCHECK_ROSTER.csv").open("r", encoding="utf-8", newline="") as handle:
+                header = next(csv.reader(handle))
+            self.assertEqual(
+                header,
+                [
+                    "identity_status",
+                    "identity_key",
+                    "display_name",
+                    "all_name_variants",
+                    "observation_count",
+                    "first_observed_timestamp",
+                    "last_observed_timestamp",
+                    "first_contact_date",
+                    "first_contact_source_path",
+                    "facebook_ids_observed",
+                    "phone_numbers_direct",
+                    "phone_number_candidates",
+                    "emails_observed",
+                    "profile_urls",
+                    "vanity_slugs",
+                    "thread_identifiers",
+                    "ip_addresses",
+                    "other_identifying_ids",
+                    "variant_ids_count",
+                    "variant_ids_sample",
+                    "source_packs",
+                    "source_paths_sample",
+                    "deleted_user_observed",
+                ],
+            )
 
 
 if __name__ == "__main__":
