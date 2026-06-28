@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Runtime outputs
+/outputs/
+/tmp/
+
+# Private inputs - never publish
+/intake/
+/jobs/
+/workspace/
+*.zip
+*.7z
+*.rar
+*.local.json
+.env
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

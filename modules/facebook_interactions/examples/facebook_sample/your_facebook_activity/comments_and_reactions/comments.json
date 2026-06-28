@@ -1,0 +1,13 @@
+{
+  "comments_v2": [
+    {
+      "timestamp": 1712016000,
+      "data": {
+        "comment": {
+          "comment": "Synthetic reader-test comment."
+        }
+      },
+      "title": "PERSON_001 commented on POST_001"
+    }
+  ]
+}

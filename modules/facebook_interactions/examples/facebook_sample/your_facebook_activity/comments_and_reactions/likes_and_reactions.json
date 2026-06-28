@@ -1,0 +1,12 @@
+[
+  {
+    "reaction": "LIKE",
+    "timestamp": 1712102400,
+    "data": [
+      {
+        "title": "PERSON_001 reacted to POST_002"
+      }
+    ],
+    "actor": "PERSON_001"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "recently_viewed": [
+    {
+      "name": "PAGE_001",
+      "entries": [
+        {
+          "timestamp": 1712188800,
+          "data": {
+            "name": "PAGE_001",
+            "uri": "sample-local://page/PAGE_001"
+          }
+        }
+      ]
+    }
+  ]
+}
