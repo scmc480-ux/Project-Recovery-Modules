@@ -8,4 +8,5 @@
 - Added timestamped JSON and zip scanning.
 - Added JSONL and CSV outputs.
 - Added entity interaction summaries with counts, first timestamps, and last timestamps.
+- Documented IP versus GPS/location evidence boundaries and confidence labels.
 - Added synthetic sample data and tests.

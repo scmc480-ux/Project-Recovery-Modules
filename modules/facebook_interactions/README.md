@@ -42,11 +42,22 @@ For each run, the module writes:
 - `run_summary.json`
 
 Each timestamped row includes timestamp, raw timestamp, interaction type,
-action, actor, target, entity name, handle or identifier when present, summary,
-source path, source hash, and raw payload path.
+action, actor, target, entity name, handle or profile identifier when present,
+summary, source path, source hash, and raw payload path.
 
-The entity summary lists identified names or handles, total interaction count,
-first timestamp, last timestamp, observed interaction types, and source paths.
+The entity summary lists identified names, handles or profile identifiers, total
+interaction count, first timestamp, last timestamp, observed interaction types,
+and source paths.
+
+## Intended Questions
+
+This module is meant to answer:
+
+- Which names, handles, pages, groups, or identifiers appear in interaction data?
+- When did each interaction occur?
+- How many interactions are associated with each identified entity?
+- What is the first and last timestamp for each entity?
+- Which source files and raw JSON paths support the result?
 
 ## Quick Run
 
