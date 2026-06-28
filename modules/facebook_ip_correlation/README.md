@@ -1,5 +1,9 @@
 # Facebook IP Correlation
 
+*Building tomorrow's recovery framework, one module at a time.*
+
+---
+
 Planned optional module for Project Recovery.
 
 This module is intentionally separate from `facebook_interactions` because IP
@@ -30,3 +34,29 @@ location evidence.
 IP correlation is not proof of physical proximity. It can produce investigative
 leads, but conclusions must remain tied to the available source data,
 timestamps, provenance, and confidence label.
+
+---
+
+# Project Ecosystem
+
+### Project Recovery
+
+*Building tomorrow's recovery framework, one module at a time.*
+
+https://github.com/scmc480-ux/Project-Recovery
+
+---
+
+### Project Symphony
+
+*One Vision. Infinite Perspectives.*
+
+https://github.com/scmc480-ux/Project-Symphony
+
+---
+
+### Project Orchestra
+
+*Become the Conductor. Orchestrate Intelligence.*
+
+https://github.com/scmc480-ux/Project-Orchestra

@@ -15,6 +15,12 @@ FORBIDDEN_PATH_PARTS = {
 PUBLIC_TEXT_SUFFIXES = {".md", ".json", ".txt", ".csv"}
 TEXT_SUFFIXES = PUBLIC_TEXT_SUFFIXES | {".py", ".toml"}
 
+ALLOWED_URLS = {
+    "https://github.com/scmc480-ux/Project-Recovery",
+    "https://github.com/scmc480-ux/Project-Symphony",
+    "https://github.com/scmc480-ux/Project-Orchestra",
+}
+
 FORBIDDEN_TEXT = [
     re.compile(r"https?://", re.IGNORECASE),
     re.compile(r"www\.", re.IGNORECASE),
@@ -41,12 +47,15 @@ def main() -> int:
         if suffix not in TEXT_SUFFIXES:
             continue
         text = path.read_text(encoding="utf-8", errors="ignore")
+        scan_text = text
+        for url in ALLOWED_URLS:
+            scan_text = scan_text.replace(url, "")
         for pattern in FORBIDDEN_TEXT:
-            if pattern.search(text):
+            if pattern.search(scan_text):
                 findings.append(f"forbidden text pattern {pattern.pattern!r} in {path.relative_to(root)}")
         if suffix in PUBLIC_TEXT_SUFFIXES:
             for pattern in PUBLIC_TEXT_ONLY:
-                if pattern.search(text):
+                if pattern.search(scan_text):
                     findings.append(f"forbidden public text pattern {pattern.pattern!r} in {path.relative_to(root)}")
     if findings:
         print("Public repository check failed:")

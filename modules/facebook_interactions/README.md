@@ -1,5 +1,9 @@
 # Project Recovery Facebook Interactions
 
+*Building tomorrow's recovery framework, one module at a time.*
+
+---
+
 Optional timestamped interaction module for Project Recovery Facebook exports.
 
 This module is separate from the Facebook Reader model so users can choose
@@ -73,3 +77,29 @@ Use an extracted Facebook export folder or a `.zip` export as `--source`.
 
 This public repository contains synthetic sample data only. Do not commit real
 Facebook exports, generated outputs, private jobs, or case material.
+
+---
+
+# Project Ecosystem
+
+### Project Recovery
+
+*Building tomorrow's recovery framework, one module at a time.*
+
+https://github.com/scmc480-ux/Project-Recovery
+
+---
+
+### Project Symphony
+
+*One Vision. Infinite Perspectives.*
+
+https://github.com/scmc480-ux/Project-Symphony
+
+---
+
+### Project Orchestra
+
+*Become the Conductor. Orchestrate Intelligence.*
+
+https://github.com/scmc480-ux/Project-Orchestra

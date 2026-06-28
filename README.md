@@ -1,5 +1,9 @@
 # Project Recovery Modules
 
+*Building tomorrow's recovery framework, one module at a time.*
+
+---
+
 Optional extension modules for the Project Recovery ecosystem.
 
 This repository is the public home for add-on modules that are useful for some
@@ -48,3 +52,29 @@ rather than proof of physical proximity.
 
 This public repository contains synthetic sample data only. Do not commit real
 exports, private case material, generated outputs, jobs, or evidence.
+
+---
+
+# Project Ecosystem
+
+### Project Recovery
+
+*Building tomorrow's recovery framework, one module at a time.*
+
+https://github.com/scmc480-ux/Project-Recovery
+
+---
+
+### Project Symphony
+
+*One Vision. Infinite Perspectives.*
+
+https://github.com/scmc480-ux/Project-Symphony
+
+---
+
+### Project Orchestra
+
+*Become the Conductor. Orchestrate Intelligence.*
+
+https://github.com/scmc480-ux/Project-Orchestra
