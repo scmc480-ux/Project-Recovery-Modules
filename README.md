@@ -21,6 +21,7 @@ specialized modules when their case needs them.
 | --- | --- | --- |
 | `facebook_interactions` | v0.1.0 | Extract names, handles or identifiers, timestamps, interaction rows, and entity interaction counts. |
 | `facebook_ip_correlation` | v0.1.0 | Extract and correlate identified IP/network/location signals with timestamps and context without treating IP location as proof. |
+| `facebook_identity_variants` | v0.1.0 | Track deleted-user labels, name variants, Facebook IDs, profile URLs, thread identifiers, Marketplace/object IDs, notification IDs, contact/device/session anchors, reused identifiers, and IP-linked identity context. |
 
 ## Repository Layout
 
@@ -32,6 +33,7 @@ Project-Recovery-Modules/
 +-- modules/
 |   +-- facebook_interactions/
 |   +-- facebook_ip_correlation/
+|   +-- facebook_identity_variants/
 +-- scripts/
 +-- tests/
 ```
@@ -47,6 +49,15 @@ they appeared, and which Facebook export surface produced the record.
 location-adjacent signals. It should compare identified IP evidence with
 timestamps and interaction context, but it must label results as correlation
 rather than proof of physical proximity.
+
+`facebook_identity_variants` tracks names, deleted-user labels, Facebook IDs,
+handles, profile URLs, vanity slugs, participant lists, message-thread
+identifiers, reused handles or profile slugs, same-name/different-ID leads, and
+IP-linked identity context. It also preserves related Marketplace, notification,
+post, comment, tag, photo, video, story, group, page, event, actor, owner, and
+target IDs as review leads, plus contact, device, session, app, engagement,
+location, and commerce/payment identifiers when present. It must label variant
+matches as correlation rather than proof of account control.
 
 ## Privacy Boundary
 

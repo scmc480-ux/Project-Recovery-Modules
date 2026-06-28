@@ -39,3 +39,46 @@ Expected outputs:
 - `ip_correlation_summary.json`
 - `ip_correlation_summary.csv`
 - `run_summary.json`
+
+Run the Facebook identity variants sample:
+
+```powershell
+python -m facebook_identity_variants.cli `
+  --source modules/facebook_identity_variants/examples/facebook_sample `
+  --output outputs/sample_identity_variants
+```
+
+Optionally pass a case-reviewed alias hypothesis map:
+
+```powershell
+python -m facebook_identity_variants.cli `
+  --source path\to\facebook_json_export `
+  --output outputs\sample_identity_variants `
+  --alias-map path\to\identity_aliases.json
+```
+
+Alias maps do not merge identities by themselves. The module promotes a
+proposed alias only when timestamped export data connects it to the master
+identity through same-session search, profile visit, page/follow, content-view,
+or profile-update evidence.
+
+Expected outputs:
+
+- `identity_observations.jsonl`
+- `identity_observations.csv`
+- `identity_variant_summary.json`
+- `identity_variant_summary.csv`
+- `identity_variant_timeline.jsonl`
+- `identity_variant_timeline.csv`
+- `owner_identity_roster.json`
+- `owner_identity_roster.csv`
+- `owner_identity_first_contact_timeline.jsonl`
+- `owner_identity_first_contact_timeline.csv`
+- `owner_identity_unassigned_id_variants.json`
+- `owner_identity_unassigned_id_variants.csv`
+- `owner_identity_crosscheck_report.txt`
+- `master_identity_alias_clusters.json`
+- `master_identity_alias_clusters.csv`
+- `master_identity_first_contact_timeline.jsonl`
+- `master_identity_first_contact_timeline.csv`
+- `run_summary.json`

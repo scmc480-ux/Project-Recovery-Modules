@@ -1,0 +1,18 @@
+{
+  "media": [
+    {
+      "timestamp": 1712877600,
+      "photo_id": "333444555666",
+      "owner_id": "123456789",
+      "name": "Alex Sample",
+      "url": "https://www.facebook.com/photo.php?fbid=333444555666&id=123456789"
+    },
+    {
+      "timestamp": 1712964000,
+      "video_id": "777888999000",
+      "owner_id": "555555555",
+      "name": "Alex Sample",
+      "url": "https://www.facebook.com/watch/?v=777888999000"
+    }
+  ]
+}

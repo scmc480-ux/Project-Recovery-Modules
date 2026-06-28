@@ -1,0 +1,16 @@
+{
+  "title": "Welcome to Facebook!",
+  "timestamp": 1712620000,
+  "href": "https://www.facebook.com/login_alerts/start/?fbid=123456789&settings_notif_id=600700800902",
+  "label_values": [
+    {
+      "label": "Email",
+      "value": "alex.sample@example.invalid"
+    },
+    {
+      "label": "Subject",
+      "value": "Welcome to Facebook!"
+    }
+  ],
+  "fbid": "123456789"
+}

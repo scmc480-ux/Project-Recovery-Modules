@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "project-recovery-modules"
-version = "0.2.0"
+version = "0.3.0"
 description = "Optional analysis modules for the Project Recovery ecosystem."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -27,7 +27,8 @@ classifiers = [
 [project.scripts]
 facebook-interactions = "facebook_interactions.cli:main"
 facebook-ip-correlation = "facebook_ip_correlation.cli:main"
+facebook-identity-variants = "facebook_identity_variants.cli:main"
 
 [tool.setuptools.packages.find]
-where = ["modules/facebook_interactions", "modules/facebook_ip_correlation"]
-include = ["facebook_interactions*", "facebook_ip_correlation*"]
+where = ["modules/facebook_interactions", "modules/facebook_ip_correlation", "modules/facebook_identity_variants"]
+include = ["facebook_interactions*", "facebook_ip_correlation*", "facebook_identity_variants*"]

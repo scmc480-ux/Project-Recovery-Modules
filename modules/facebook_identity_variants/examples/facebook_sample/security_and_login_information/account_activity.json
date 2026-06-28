@@ -1,0 +1,18 @@
+{
+  "account_activity": [
+    {
+      "timestamp": 1713050400,
+      "name": "Alex Sample",
+      "profile_id": "123456789",
+      "account_id": "321321321000",
+      "session_id": "222333444666",
+      "device_id": "555666777888",
+      "browser_id": "111222333555",
+      "cookie_id": "888777666555",
+      "app_id": "999000111222",
+      "email": "alex.sample@example.invalid",
+      "phone_number": "+1 (555) 010-2000",
+      "ip_address": "198.51.100.10"
+    }
+  ]
+}

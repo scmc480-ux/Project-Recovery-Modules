@@ -1,0 +1,14 @@
+{
+  "clusters": [
+    {
+      "alias_cluster_id": "alias_cluster:alex_sample",
+      "master_identity": "Alex Sample",
+      "aliases": [
+        "Alex Sample",
+        "Alex Alias"
+      ],
+      "confidence": "manual_alias_map",
+      "explanation": "Synthetic fixture: Alex S. is a known alias of Alex Sample."
+    }
+  ]
+}

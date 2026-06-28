@@ -1,0 +1,21 @@
+{
+  "marketplace_activity": [
+    {
+      "timestamp": 1712445600,
+      "listing_id": "900100200300",
+      "seller_id": "123456789",
+      "buyer_id": "987654321",
+      "product_id": "700800900100",
+      "seller_name": "Alex Sample",
+      "target_id": "900100200300",
+      "url": "https://www.facebook.com/marketplace/item/900100200300/?seller_id=123456789"
+    },
+    {
+      "timestamp": 1712532000,
+      "marketplace_listing_id": "900100200300",
+      "seller_id": "555555555",
+      "seller_name": "Alex Sample",
+      "url": "https://www.facebook.com/marketplace/item/900100200300/?listing_id=900100200300"
+    }
+  ]
+}
