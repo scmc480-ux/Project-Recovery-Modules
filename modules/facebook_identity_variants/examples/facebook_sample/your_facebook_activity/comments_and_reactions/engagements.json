@@ -1,0 +1,15 @@
+{
+  "comments_and_reactions": [
+    {
+      "timestamp": 1713136800,
+      "reaction_id": "101010101010",
+      "like_id": "202020202020",
+      "share_id": "303030303030",
+      "comment_id": "111222333444",
+      "reply_comment_id": "121212121212",
+      "author_id": "123456789",
+      "author": "Alex Sample",
+      "url": "https://www.facebook.com/permalink/444555666777?comment_id=111222333444&reply_comment_id=121212121212"
+    }
+  ]
+}

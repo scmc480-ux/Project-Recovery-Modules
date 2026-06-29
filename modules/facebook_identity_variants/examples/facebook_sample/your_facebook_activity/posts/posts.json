@@ -1,0 +1,18 @@
+{
+  "posts": [
+    {
+      "timestamp": 1712791200,
+      "post_id": "444555666777",
+      "author_id": "123456789",
+      "author": "Alex S.",
+      "tagged_users": [
+        {
+          "name": "Facebook user",
+          "tagged_user_id": "987654321",
+          "tag_id": "222333444555"
+        }
+      ],
+      "url": "https://www.facebook.com/alexsample/posts/444555666777"
+    }
+  ]
+}

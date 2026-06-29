@@ -1,0 +1,17 @@
+{
+  "profile_v2": {
+    "name": {
+      "full_name": "Alex Sample",
+      "first_name": "Alex",
+      "last_name": "Sample"
+    },
+    "emails": {
+      "emails": [
+        "alex.sample@example.invalid"
+      ],
+      "previous_emails": [
+        "alex.old@example.invalid"
+      ]
+    }
+  }
+}
